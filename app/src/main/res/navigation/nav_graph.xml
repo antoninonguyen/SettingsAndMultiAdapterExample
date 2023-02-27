@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.settingsdemo.main_fragment.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_dryingStationFragment"
+            app:destination="@id/dryingStationFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_cipFragment"
+            app:destination="@id/cipFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_cipFragment2"
+            app:destination="@id/cipFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_idFragment"
+            app:destination="@id/idFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.example.settingsdemo.childfragments.SettingsFragment"
+        android:label="SettingsFragment" >
+        <action
+            android:id="@+id/action_settingsFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/dryingStationFragment"
+        android:name="com.example.settingsdemo.childfragments.DryingStationFragment"
+        android:label="fragment_item_list_ds"
+        tools:layout="@layout/fragment_item_list_ds" >
+        <action
+            android:id="@+id/action_dryingStationFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/cipFragment"
+        android:name="com.example.settingsdemo.childfragments.CipFragment"
+        android:label="fragment_cip_list_cip"
+        tools:layout="@layout/fragment_cip_list_cip" >
+        <action
+            android:id="@+id/action_cipFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/idFragment"
+        android:name="com.example.settingsdemo.childfragments.IdFragment"
+        android:label="fragment_id"
+        tools:layout="@layout/fragment_id" />
+</navigation>
